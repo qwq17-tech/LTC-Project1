@@ -1,0 +1,212 @@
+:root {
+    --navy: #16395f;
+    --navy-dark: #0f2a47;
+    --sky: #f2f6fb;
+    --white: #ffffff;
+    --accent: #f0a58f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--navy);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px 40px;
+    background-color: var(--white);
+    border-bottom: 4px solid var(--navy);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Crops the empty space around the logo */
+.brand img {
+    width: 160px;
+    height: 84px;
+    object-fit: cover;
+    object-position: center 51%;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+    text-decoration: underline;
+}
+
+/* Hero */
+.main {
+    display: flex;
+    align-items: center;
+    min-height: 460px;
+    padding: 80px 40px;
+    background-image:
+        linear-gradient(90deg, rgba(15, 42, 71, 0.85) 0%, rgba(15, 42, 71, 0.2) 100%),
+        url("plane-background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content {
+    max-width: 520px;
+}
+
+.main h2 {
+    margin: 0 0 16px;
+    font-size: 2.6rem;
+    color: var(--white);
+}
+
+.main p {
+    margin: 0 0 28px;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent);
+    color: var(--navy-dark);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: var(--white);
+}
+
+/* Shared section layout */
+.about,
+.destinations {
+    padding: 64px 40px;
+    text-align: center;
+}
+
+.about h2,
+.destinations h2 {
+    margin: 0 0 16px;
+    font-size: 2rem;
+}
+
+/* About: image on the left, text on the right */
+.about {
+    background-color: var(--navy);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+    gap: 16px 32px;
+    padding-left: max(40px, calc((100% - 900px) / 2));
+    padding-right: max(40px, calc((100% - 900px) / 2));
+}
+
+.about h2 {
+    grid-column: 1 / -1;
+}
+
+.about img {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.destinations {
+    background-color: var(--sky);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 32px auto 0;
+}
+
+.card {
+    padding: 28px 24px;
+    background-color: var(--white);
+    border: 1px solid #d5e0ee;
+    border-top: 4px solid var(--navy);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto 16px;   
+    max-width: 100%;       
+    border-radius: 4px;
+}
+
+.footer {
+    padding: 24px 40px;
+    background-color: var(--navy-dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+.footer a {
+    color: var(--white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
